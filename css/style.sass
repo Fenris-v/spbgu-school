@@ -1,0 +1,786 @@
+@import "variables"
+@import "prefixes"
+/* RESET */
+@import "normalize"
+
+body
+  max-width: 100%
+  overflow-x: hidden
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+.wrapper
+  max-width: 1260px
+  padding: 0 30px
+  width: 100%
+  margin: 0 auto
+
+  &_fullHd
+    max-width: 1920px
+    margin: 0 auto
+
+.btn
+  @include font($white, $regular, normal, 12px, 40px)
+  padding: 0 20px
+  text-transform: uppercase
+  text-decoration: none
+  display: inline-flex
+
+  &_red
+    background: $red
+
+  &_center
+    text-align: center
+
+  &_none
+    @include font(#4A4A4A, $bold, bold, 16px)
+
+h1
+  @include font($textBlack, $bold, bold, 60px)
+  margin: 0 0 60px
+
+.upper
+  text-transform: uppercase
+
+header
+  position: relative
+  z-index: 1
+
+  .wrapper_fullHd
+    background: rgb(0, 0, 0)
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%)
+
+  &.white
+    .wrapper_fullHd
+      background: none
+
+    .header__nav nav ul li a, .header__nav__links li a
+      color: $textBlack
+
+.header
+  height: 150px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  &.white
+    .logo
+      color: $red
+
+  .logo
+    display: flex
+    align-items: center
+    @include font($white, $bold, bold, 18px, 1.2)
+    text-decoration: none
+
+  &__nav
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+    &__links
+      display: flex
+      align-items: center
+      list-style: none
+      padding: 0
+      margin: 0 0 40px
+
+      li
+        &:not(:last-child)
+          margin-right: 20px
+
+        a
+          text-decoration: none
+          @include font($white, $regular, normal, 14px)
+
+          &:hover
+            text-decoration: underline
+
+    nav
+      ul
+        display: flex
+        align-items: center
+        list-style: none
+        margin: 0
+        padding: 0
+
+        li
+          &:not(:last-child)
+            margin-right: 40px
+
+          a
+            text-decoration: none
+            @include font($white, $bold, bold, 16px)
+
+            &:hover
+              text-decoration: underline
+
+  .languageChooseWrapper
+    display: flex
+
+    > img
+      margin-right: 15px
+
+    .nextLengWrapper
+      display: none
+
+    .languageChoose
+      display: flex
+      align-items: center
+      justify-content: center
+
+.s_firstScreen
+  margin-bottom: 100px
+
+  .wrapper_fullHd
+    margin-top: -150px
+    background: url("../images/spbgu.jpeg") center center no-repeat
+    background-size: cover
+
+    .blur
+      width: 100%
+      padding: 40px 0
+      background: rgba(79, 79, 79, 0.8)
+
+.firstScreen
+  padding-top: 300px
+
+  h1
+    @include font($white, $bold, bold, 56px, 1.3)
+
+  p
+    @include font($white, $regular, normal, 16px, 1.4)
+    max-width: 800px
+    margin: 0 0 200px
+
+  &__items
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+    &__item
+      width: 32%
+      display: flex
+      align-items: flex-start
+
+      img
+        width: 50px
+        flex-shrink: 0
+        margin-right: 30px
+
+      &__content
+        display: flex
+        flex-direction: column
+
+        &__title
+          @include font($white, $bold, bold, 20px)
+          margin-bottom: 10px
+
+        p
+          @include font($white, $regular, normal, 13px, 1.4)
+          margin: 0
+
+.s_count
+  margin-bottom: 40px
+
+.count
+  &__list
+    margin-bottom: 80px
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+    &__item
+      width: 30%
+      display: flex
+      flex-direction: column
+      text-align: center
+      align-items: center
+
+      &__num
+        @include font($textBlack, $bold, bold, 80px)
+        margin-bottom: 40px
+
+      p
+        margin: 0
+        max-width: 280px
+        @include font($textBlack, $regular, normal, 16px, 1.4)
+
+.list
+  &__items
+    display: flex
+
+    &.wrap
+      flex-wrap: wrap
+
+    &__item
+      width: 32%
+      position: relative
+      margin-bottom: 20px
+      text-decoration: none
+      display: block
+
+      &.height
+        min-height: 160px
+
+      &:nth-child(3n+2)
+        margin: 0 2% 20px
+
+      > div
+        position: relative
+        padding: 20px
+        @include box-sizing()
+        background: rgba(0, 0, 0, 0.5)
+
+      img
+        @include object-fit(cover)
+        width: 100%
+        height: 100%
+        position: absolute
+
+      &__title
+        margin: 0 0 20px
+        @include font($white, $bold, bold, 20px)
+        height: 50px
+        overflow: hidden
+
+      p
+        @include font($white, $regular, normal, 12px, 1.5)
+        height: 60px
+        overflow: hidden
+        margin: 0 0 20px
+
+      a
+        @include font($white, $regular, normal, 12px)
+
+        span
+          @include font($white, $bold, bold, 14px)
+          text-transform: uppercase
+          text-decoration: none
+
+      &__name
+        @include font($white, $bold, bold, 14px)
+        text-transform: uppercase
+
+.innerTitle
+  @include font($textBlack, $bold, bold, 26px, 1.4)
+  margin: 0 0 30px
+
+.s_about
+  background: $grey
+  margin-bottom: 50px
+
+.about
+  padding: 50px 0
+
+  .innerTitle
+    text-align: center
+
+  &__desc
+    @include font($textBlack, $regular, normal, 17px, 1.5)
+    text-align: center
+    max-width: 800px
+    margin: 0 auto 60px
+
+  &__list
+    display: flex
+    justify-content: space-between
+
+    img
+      width: 100%
+      height: 350px
+      @include object-fit()
+      margin-bottom: 50px
+
+    &_half
+      width: 48%
+      display: flex
+      flex-direction: column
+
+      a
+        margin-top: auto
+        margin-left: auto
+
+    &__name
+      @include font($textBlack, $bold, bold, 17px)
+      margin-bottom: 10px
+
+    &__items
+      margin: 0
+      padding: 0
+      list-style: none
+
+      li
+        margin-bottom: 5px
+        @include font($textBlack, $regular, normal, 17px, 1.3)
+
+        &::before
+          content: '– '
+
+        &:last-child
+          margin-bottom: 30px
+
+.s_events
+  margin-bottom: 50px
+
+.s_socials
+  background: $darkGrey
+  margin-top: auto
+
+.socials
+  padding: 30px 0
+  list-style: none
+  margin: 0
+  +center
+
+  li:not(:last-child)
+    margin-right: 80px
+
+  a
+    +center
+
+    img
+      height: 25px
+
+footer
+  hr
+    height: 1px
+    border: none
+    background: $white
+    margin: 0
+
+.footer
+  &_top
+    background: $blackBg
+    padding: 50px 0 150px
+
+  &__nav
+    display: flex
+    justify-content: space-between
+
+    &__menu
+      width: 23%
+
+      &__title
+        margin-bottom: 40px
+        @include font($white, $bold, bold, 12px)
+        text-transform: uppercase
+
+      ul
+        margin: 0
+        padding: 0
+        list-style: none
+
+        li
+          margin-bottom: 15px
+
+          a
+            @include font($white, $regular, normal, 12px)
+            text-decoration: none
+
+  &_bottom
+    background: $secondBlack
+    padding: 40px 0
+
+  &__copyright
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    img
+      margin-bottom: 30px
+
+    p
+      margin: 0 0 60px
+      @include font($white, $regular, normal, 14px)
+
+    a
+      @include font($white, $regular, normal, 14px)
+      text-decoration: none
+      opacity: 0.4
+
+.s_helperLinks
+  background: $grey
+  margin-bottom: 60px
+
+.helperLinks
+  margin: 0
+  padding: 0
+  display: flex
+  align-items: center
+  list-style: none
+
+  li
+    margin-right: 50px
+
+  a
+    @include font($textBlack, $bold, bold, 14px, 50px)
+    @include transition()
+    text-decoration: none
+
+    &.active, &:hover
+      color: $red
+      @include transition()
+
+.s_content
+  margin-bottom: 80px
+
+.content
+  .offer
+    margin-bottom: 80px
+    height: 450px
+    display: flex
+
+    &__content
+      display: flex
+      flex-direction: column
+      height: 100%
+      width: 40%
+      background: $red
+      @include font($white, $regular, normal, 16px, 1.3)
+
+      p
+        padding: 20px
+        margin: 0
+        @include box-sizing()
+
+      .btn
+        display: block
+        margin-top: auto
+
+        &_red
+          background: $darkRed
+
+    &__img
+      width: 60%
+
+      img
+        @include object-fit()
+        width: 100%
+        height: 100%
+
+.flexList
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+  &__item
+    width: 30%
+
+    img
+      height: 50px
+      margin-bottom: 30px
+
+    &__title
+      @include font($textBlack, $bold, bold, 20px)
+      margin-bottom: 10px
+
+    p
+      @include font($textBlack, $bold, bold, 14px, 1.5)
+      margin: 0 0 60px
+
+.s_soon
+  background: $grey
+  padding: 80px 0
+  margin-bottom: 80px
+
+.flexHalf
+  &__item
+    height: 450px
+
+.wrap
+  flex-wrap: wrap
+
+.flexHalf
+  display: flex
+  justify-content: space-between
+  margin-bottom: 40px
+
+  &__item
+    width: 49%
+    position: relative
+    margin-bottom: 40px
+
+    &:first-child
+      > div
+        border-left: 10px solid #91C83F
+
+    &:nth-child(2)
+      > div
+        border-left: 10px solid #D74882
+
+    &:nth-child(3)
+      > div
+        border-left: 10px solid #F78D2C
+
+    img
+      position: absolute
+      @include object-fit()
+      width: 100%
+      height: 100%
+
+    > div
+      position: relative
+      padding: 20px
+      display: flex
+      height: 100%
+      flex-direction: column
+      background: rgba(0, 0, 0, 0.5)
+      @include box-sizing()
+
+    &__title
+      @include font($white, $bold, bold, 20px)
+      margin-bottom: 15px
+
+    &__date
+      @include font($white, $regular, normal, 14px)
+      margin-bottom: 40px
+
+    p
+      margin: 0
+      @include font($white, $regular, normal, 13px)
+
+    a
+      margin-top: auto
+      margin-left: auto
+      @include font($white, $bold, bold, 11px)
+      text-transform: uppercase
+      text-decoration: none
+
+.events__list.bordered
+  .list__items__item > div
+    border-left: 10px solid #F78D2C
+
+.item_big
+  position: relative
+  height: 600px
+  margin-bottom: 40px
+
+  .border_absolute
+    position: absolute
+    height: 60px
+    width: 10px
+    background: #91C83F
+    left: 0
+    top: 80px
+    z-index: 1
+
+  img
+    position: absolute
+    width: 100%
+    height: 100%
+
+  &__content
+    padding: 50px
+    position: relative
+    height: 100%
+    @include box-sizing()
+
+  .blur
+    width: 100%
+    padding: 40px 0
+    background: rgba(0, 0, 0, 0.6)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+  h1
+    color: $white
+    line-height: 1.7
+
+  &__date
+    font-style: italic
+    @include font($white, $regular, normal, 20px)
+
+  &__props
+    background: rgba(159, 45, 32, 0.8)
+    position: absolute
+    width: 430px
+    right: 0
+    bottom: 0
+    padding: 20px
+    @include box-sizing()
+
+    p
+      @include font($white, $regular, normal, 14px)
+
+      span
+        font-weight: bold
+        font-family: $bold
+
+.flexAcc
+  display: flex
+  justify-content: space-between
+
+  &_left
+    width: 70%
+
+    > p
+      @include font($textBlack, $regular, normal, 17px)
+
+    &__item
+      border: 1px solid #D8D8D8
+
+      &__title
+        @include font()
+        padding: 20px
+        margin-bottom: 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        cursor: pointer
+        background: $grey
+        @include transition()
+
+        .minus
+          display: none
+
+      &__content
+        padding: 0 20px
+        display: none
+
+        hr
+          border: none
+          height: 2px
+          background: #D8D8D8
+          margin: 0
+
+        ul
+          padding: 20px
+          margin: 20px 0
+
+          li
+            margin-bottom: 20px
+
+      &.active
+        .flexAcc_left__item
+          &__title
+            background: transparent
+            @include transition()
+
+            .plus
+              display: none
+
+            .minus
+              display: block
+
+  &_right
+    width: 28%
+
+    &__info
+      background: $grey
+      padding: 20px
+      @include box-sizing()
+      margin-bottom: 30px
+
+      hr
+        border: none
+        height: 2px
+        background: #D8D8D8
+        margin: 0
+
+      p
+        @include font($textBlack, $regular, normal, 12px)
+
+      ul
+        margin: 0
+        padding: 0 20px
+        list-style: none
+
+        li
+          margin-bottom: 10px
+          @include font($textBlack, $bold, bold, 14px)
+
+    &__attention
+      padding: 30px
+      @include box-sizing()
+      border: 8px solid $red
+      @include font($red, $regular, normal, 16px, 1.5)
+      text-align: center
+
+      a
+        @include font($red, $regular, normal, 16px, 1.5)
+        text-decoration: none
+
+.contentFlex
+  display: flex
+  justify-content: space-between
+  margin-bottom: 20px
+
+  &_half
+    width: 48%
+    padding: 20px
+    @include box-sizing()
+
+    &.bg
+      background: $grey
+
+    &__title
+      @include font($textBlack, $bold, bold, 20px)
+      margin-bottom: 10px
+
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+
+      li
+        @include font($textBlack, $regular, normal, 14px, 1.3)
+
+        &:not(:last-child)
+          margin-bottom: 20px
+
+        &::before
+          content: '– '
+
+.levels
+  margin-top: 80px
+  display: flex
+  justify-content: space-between
+  margin-bottom: 80px
+
+  &_left
+    width: 60%
+
+    p
+      @include font($textBlack, $regular, normal, 17px, 1.3)
+      margin-bottom: 40px
+
+  &_right
+    width: 33%
+
+    img
+      width: 100%
+      height: 200px
+      margin: 0 0 20px
+      @include object-fit()
+
+    &__adds
+      background: $grey
+      padding: 20px
+      @include box-sizing()
+      height: 100%
+
+      &__title
+        margin-bottom: 10px
+        @include font($textBlack, $bold, bold, 20px)
+
+      ul
+        list-style: none
+        margin: 0 0 20px
+        padding: 0
+
+        li
+          margin-bottom: 10px
+
+          a
+            @include font($red, $regular, normal, 14px)
+            text-decoration: none
+
+@import "hamburger"
+
+/* RESPONSIVE */
+@import "responsive"
