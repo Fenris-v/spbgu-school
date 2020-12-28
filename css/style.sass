@@ -36,6 +36,17 @@ body
   &_none
     @include font(#4A4A4A, $bold, bold, 16px)
 
+  &_white
+    color: $textBlack
+    border: 2px solid #D8D8D8
+    line-height: 36px
+
+.btnFlex
+  @include center
+
+  .btn:first-child
+    margin-right: 20px
+
 h1
   @include font($textBlack, $bold, bold, 60px)
   margin: 0 0 60px
@@ -73,6 +84,10 @@ header
     align-items: center
     @include font($white, $bold, bold, 18px, 1.2)
     text-decoration: none
+
+    img
+      width: 85px
+      margin-right: 20px
 
   &__nav
     display: flex
@@ -705,6 +720,9 @@ footer
         @include font($red, $regular, normal, 16px, 1.5)
         text-decoration: none
 
+.textCenter
+  text-align: center
+
 .contentFlex
   display: flex
   justify-content: space-between
@@ -714,6 +732,38 @@ footer
     width: 48%
     padding: 20px
     @include box-sizing()
+
+    .bigImg
+      margin-bottom: 20px
+
+      img
+        width: 100%
+
+    .imgBottom
+      display: flex
+      flex-wrap: wrap
+
+      a
+        width: 60px
+        height: 80px
+        margin-right: 10px
+
+        img
+          width: 100%
+          height: 100%
+          @include object-fit()
+
+    &.nopad
+      padding: 0
+
+    > img
+      width: 100%
+
+    .btn
+      margin-top: auto
+
+    p
+      margin-bottom: 20px
 
     &.bg
       background: $grey
@@ -779,6 +829,21 @@ footer
           a
             @include font($red, $regular, normal, 14px)
             text-decoration: none
+
+.contentTable
+  border-collapse: collapse
+  width: 100%
+  margin-bottom: 40px
+
+  td
+    border: 1px solid #D8D8D8
+    padding: 10px 20px
+    @include font($textBlack, $regular, normal, 16px, 1.5)
+
+  thead
+    td
+      font-weight: bold
+      font-family: $bold
 
 @import "hamburger"
 

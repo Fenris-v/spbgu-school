@@ -15,4 +15,20 @@ $(document).ready(() => {
             parent.find('.flexAcc_left__item__content').stop(true, true).slideDown();
         }
     });
+
+    /**
+     * GALLERY
+     */
+    $('.imgBottom a').on('click', (e) => {
+        e.preventDefault();
+        console.log(123);
+
+        let link = $(e.target).attr('href');
+        if (e.target.nodeName !== 'A') {
+            link = $(e.target).parent('a')[0].href;
+        }
+
+        $('.bigImg a').attr('href', link);
+        $('.bigImg img').attr('src', link);
+    });
 });

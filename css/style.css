@@ -406,6 +406,17 @@ body {
     font-family: OSBold, sans-serif;
     color: #4A4A4A;
     line-height: 1; }
+  .btn_white {
+    color: #000000;
+    border: 2px solid #D8D8D8;
+    line-height: 36px; }
+
+.btnFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .btnFlex .btn:first-child {
+    margin-right: 20px; }
 
 h1 {
   font-size: 60px;
@@ -445,6 +456,9 @@ header {
     color: #ffffff;
     line-height: 1.2;
     text-decoration: none; }
+    .header .logo img {
+      width: 85px;
+      margin-right: 20px; }
   .header__nav {
     display: flex;
     flex-direction: column;
@@ -1130,6 +1144,9 @@ footer hr {
         line-height: 1.5;
         text-decoration: none; }
 
+.textCenter {
+  text-align: center; }
+
 .contentFlex {
   display: flex;
   justify-content: space-between;
@@ -1140,6 +1157,30 @@ footer hr {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
+    .contentFlex_half .bigImg {
+      margin-bottom: 20px; }
+      .contentFlex_half .bigImg img {
+        width: 100%; }
+    .contentFlex_half .imgBottom {
+      display: flex;
+      flex-wrap: wrap; }
+      .contentFlex_half .imgBottom a {
+        width: 60px;
+        height: 80px;
+        margin-right: 10px; }
+        .contentFlex_half .imgBottom a img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover; }
+    .contentFlex_half.nopad {
+      padding: 0; }
+    .contentFlex_half > img {
+      width: 100%; }
+    .contentFlex_half .btn {
+      margin-top: auto; }
+    .contentFlex_half p {
+      margin-bottom: 20px; }
     .contentFlex_half.bg {
       background: #F7F7F5; }
     .contentFlex_half__title {
@@ -1213,6 +1254,22 @@ footer hr {
             color: #9F2D20;
             line-height: 1;
             text-decoration: none; }
+
+.contentTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 40px; }
+  .contentTable td {
+    border: 1px solid #D8D8D8;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: OS, sans-serif;
+    color: #000000;
+    line-height: 1.5; }
+  .contentTable thead td {
+    font-weight: bold;
+    font-family: OSBold, sans-serif; }
 
 @font-face {
   font-family: OS;
