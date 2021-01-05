@@ -31,4 +31,12 @@ $(document).ready(() => {
         $('.bigImg a').attr('href', link);
         $('.bigImg img').attr('src', link);
     });
+
+    /**
+     * HAMBURGER
+     */
+    $('.menu-toggle-inner').on('click', () => {
+        $('.adaptive-menu-toggle').toggleClass('adaptive-menu-toggle--open');
+        $('.headerNav_adaptive').toggleClass('header_opened');
+    });
 });

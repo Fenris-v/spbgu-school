@@ -1,4 +1,119 @@
 @import "variables"
 @import "prefixes"
 
-@media only screen and (max-width: 1200px)
+@media only screen and (max-width: 900px)
+  .header__nav
+    display: none
+
+  .firstScreen__items
+    flex-wrap: wrap
+
+    &__item
+      width: 100%
+      margin-bottom: 20px
+
+  .list__items__item
+    width: 48%
+    margin-bottom: 20px !important
+
+    &:nth-child(3n+2)
+      margin: 0
+
+    &:nth-child(even)
+      margin-left: 4%
+
+  .list__items
+    flex-wrap: wrap
+
+  .count__list__item__num
+    font-size: 40px
+
+  .content .offer
+    height: auto
+    flex-direction: column
+
+  .content .offer__content, .content .offer__img
+    width: 100%
+
+  .flexAcc
+    flex-direction: column-reverse
+
+  .flexAcc_right
+    width: auto
+    display: flex
+
+  .flexAcc_right__info
+    margin-right: 20px
+
+  .flexAcc_right__attention
+    margin-bottom: 20px
+
+  .flexAcc_left
+    width: 100%
+
+  .item_big h1
+    font-size: 30px
+    line-height: 1.4
+
+  .item_big__props
+    width: 100%
+
+  .levels
+    flex-wrap: wrap
+
+  .levels_left
+    margin-bottom: 20px
+
+  .levels_left, .levels_right
+    width: 100%
+
+  .flexList
+    flex-wrap: wrap
+
+  .flexList__item
+    width: 48%
+
+  .contentFlex
+    flex-wrap: wrap
+
+  .contentFlex_half
+    width: 100%
+
+@media only screen and (max-width: 640px)
+  .firstScreen h1
+    font-size: 30px
+
+  .firstScreen p
+    margin-bottom: 100px
+
+  .about__list
+    flex-wrap: wrap
+
+    &_half
+      width: 100%
+
+  .flexHalf__item
+    width: 100%
+
+  .contentFlex
+    flex-wrap: wrap
+
+  .contentFlex_half
+    width: 100%
+    margin-bottom: 20px
+
+  .btnFlex
+    flex-wrap: wrap
+
+  .flexList__item
+    width: 100%
+
+  .socials li:not(:last-child)
+    margin-right: 40px
+
+  .footer__nav
+    flex-wrap: wrap
+
+  .footer__nav__menu
+    width: 48%
+    margin-bottom: 40px

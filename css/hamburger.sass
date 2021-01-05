@@ -24,7 +24,7 @@
 
 .menu-toggle-line
   position: absolute
-  background: red
+  background: $red
   display: block
   margin: auto
   height: 4px
@@ -64,7 +64,7 @@
   -moz-transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, -moz-transform 0.2s ease 0s
 
 .adaptive-menu-toggle--open .menu-toggle-line
-  background: red
+  background: $red
 
 .adaptive-menu-toggle--open .menu-toggle-line--1
   width: 0
@@ -94,7 +94,7 @@
   -o-transition: opacity 0.2s ease 0.4s, -o-transform 0.2s ease 0.4s
   -moz-transition: opacity 0.2s ease 0.4s, transform 0.2s ease 0.4s, -moz-transform 0.2s ease 0.4s
 
-@media only screen and (max-width: 640px)
+@media only screen and (max-width: 900px)
   .header__hamburger
     display: block !important
     position: absolute
@@ -102,7 +102,7 @@
     top: 20px
 
   .headerNav_adaptive
-    background: grey
+    background: $darkGrey
     display: none
     padding-top: 60px
     position: absolute
@@ -110,16 +110,18 @@
     +transform(translateX(-100%))
     width: 100%
     z-index: 3
+    left: 0
+    right: 0
 
   .header_opened
     display: block !important
     +transform(translateX(0))
 
   .headerNav__items_adaptive a
-    background: grey
+    background: $darkGrey
     border: $textBlack 1px solid
     border-bottom: none
-    color: red
+    color: $red
     display: block
     font-family: "Museo Sans Cyrl -300", sans-serif
     font-size: 17px
@@ -128,3 +130,19 @@
 
   .headerNav__items_adaptive li:last-child a
     border-bottom: $textBlack 1px solid
+
+  .headerNav_adaptive
+    .header__nav__links, nav ul
+      display: flex
+      list-style: none
+      flex-direction: column
+      padding: 0
+      margin: 0
+      align-items: flex-start
+
+      li
+        margin-left: 20px
+
+        a
+          @include font($white, $regular, noraml, 15px)
+          text-decoration: none
